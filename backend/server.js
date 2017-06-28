@@ -44,18 +44,25 @@ console.log('Magic happens on port ' + port);
 // =============================================================================
 
 
-var myObject = {}
-var classesNoRoutesResponse = [];
+let myObject = {}
+let classesNoRoutesResponse = [];
         for (var item in data) {
-            myObject = ( data[item]['location'] + ' status:'+ data[item][' startdate']+ data[item]['startDate'])
-            console.log( myObject + "\n")
+            myObject =  data[item]['location'] + data[item][' startdate']+ data[item]['startDate']
+            //console.log( myObject + "\n")
+            classesNoRoutesResponse.push(myObject)
+            //console.log(myObject + "\n")
         }
+            //console.log(classesNoRoutesResponse)
+
+
+
+
 
     router.route('/lessons')
     // get all the lessons (accessed at GET http://localhost:8080/lessons)
 
     .get(function(req, res) {
-
+        return res.json(classesNoRoutesResponse);
     });
 
 
