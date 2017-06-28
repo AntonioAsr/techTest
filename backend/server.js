@@ -8,7 +8,8 @@ var express    = require('express');        // call express
 var app        = express();                 // define our app using express
 var bodyParser = require('body-parser');
 var data       = require('../data');
-
+var path       = require('path');
+app.use(express.static('frontend'))
 
 
 // configure app to use bodyParser()
@@ -23,10 +24,9 @@ var port = process.env.PORT || 8080;        // set our port
 // =============================================================================
 var router = express.Router();              // get an instance of the express Router
 
-// test route to make sure everything is working (accessed at GET http://localhost:8080/api)
-router.get('/', function(req, res) {
-    res.json({ message: 'hooray! welcome to our api!' });
-});
+// send our clients our static files
+     app.use(express.static(path.join(__dirname, '../frontend')));
+
 
 // more routes for our API will happen here
 
@@ -53,10 +53,6 @@ let classesNoRoutesResponse = [];
             //console.log(myObject + "\n")
         }
             //console.log(classesNoRoutesResponse)
-
-
-
-
 
     router.route('/lessons')
     // get all the lessons (accessed at GET http://localhost:8080/lessons)
