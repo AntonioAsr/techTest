@@ -16,6 +16,7 @@ var data       = require('../data');
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
+
 var port = process.env.PORT || 8080;        // set our port
 
 // ROUTES FOR OUR API
@@ -42,13 +43,19 @@ console.log('Magic happens on port ' + port);
 // ROUTE LESSONS
 // =============================================================================
 
-router.route('/lessons')
 
+var myObject = {}
+var classesNoRoutesResponse = [];
+        for (var item in data) {
+            myObject = ( data[item]['location'] + ' status:'+ data[item][' startdate']+ data[item]['startDate'])
+            console.log( myObject + "\n")
+        }
+
+    router.route('/lessons')
     // get all the lessons (accessed at GET http://localhost:8080/lessons)
 
-
     .get(function(req, res) {
-        res.send(data);
+
     });
 
 
