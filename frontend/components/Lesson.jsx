@@ -7,5 +7,6 @@ class Lesson extends React.Component {
     return <div>Hello {this.props.name}</div>;
   }
 }
-
 ReactDOM.render(<Lesson name="Antonio" />, document.getElementById("app"));
+
+export default Lesson;

@@ -5,7 +5,7 @@
  var SRC_DIR = path.resolve(__dirname, 'frontend' );
 
  module.exports = {
-    entry: SRC_DIR + '/components/Lesson.jsx',
+    entry: SRC_DIR + '/components/index.js',
     output: {
         path: DIST_DIR + '/app',
         filename: 'bundle.js',
