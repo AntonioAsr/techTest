@@ -9,8 +9,6 @@ var app        = express();                 // define our app using express
 var bodyParser = require('body-parser');
 var data       = require('../data');
 var path       = require('path');
-app.use(express.static('frontend'))
-
 
 // configure app to use bodyParser()
 // this will let us get the data from a POST
@@ -24,11 +22,9 @@ var port = process.env.PORT || 8080;        // set our port
 // =============================================================================
 var router = express.Router();              // get an instance of the express Router
 
-// send our clients our static files
-     app.use(express.static(path.join(__dirname, '../frontend')));
+// send our public directory
+     app.use(express.static(path.join(__dirname, '../dist')));
 
-
-// more routes for our API will happen here
 
 // REGISTER OUR ROUTES -------------------------------
 // all of our routes will be prefixed with /
@@ -42,7 +38,6 @@ console.log('Magic happens on port ' + port);
 
 // ROUTE LESSONS
 // =============================================================================
-
 
 let myObject = {}
 let classesNoRoutesResponse = [];
