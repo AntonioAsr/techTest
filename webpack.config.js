@@ -5,7 +5,7 @@
  var SRC_DIR = path.resolve(__dirname, 'frontend' );
 
  module.exports = {
-    entry: SRC_DIR + '/components/hi.js',
+    entry: SRC_DIR + '/components/Lesson.jsx',
     output: {
         path: DIST_DIR + '/app',
         filename: 'bundle.js',
@@ -16,7 +16,7 @@
      module: {
          loaders: [
              {
-                 test: /\.js$/,
+                 test: /\.jsx?$/,
                  loader: 'babel-loader',
                  query: {
                      presets: ['es2015', 'react'],
