@@ -4,11 +4,12 @@
   "description": "small fullstack demo app",
   "main": "index.js",
   "dependencies": {
+    "body-parser": "~1.0.1",
     "express": "~4.0.0",
     "mongoose": "~3.6.13",
-    "body-parser": "~1.0.1"
+    "react-bootstrap": "^0.31.0"
   },
-"scripts": {
+  "scripts": {
     "webpack": "webpack",
     "serve": "node backend/server.js"
   },

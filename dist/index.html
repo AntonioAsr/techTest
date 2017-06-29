@@ -1,9 +1,14 @@
 <html>
     <head>
         <title>miDrive</title>
+        <!--Because React-Bootstrap doesn't depend on a very precise version of Bootstrap, we don't ship
+         with any included css. However, some stylesheet is required to use these components. How and which
+        bootstrap styles you include is up to you, but the simplest way is to include the latest styles from the CDN.-->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/latest/css/bootstrap.min.css">
     </head>
     <body>
+        <div id="Navbar"></div>
         <div id="app"></div>
-    <script src="./app/bundle.js"></script>
+        <script src="./app/bundle.js"></script>
     </body>
 </html>
