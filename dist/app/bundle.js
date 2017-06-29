@@ -10440,7 +10440,7 @@ module.exports = Cancel;
 
 
 Object.defineProperty(exports, "__esModule", {
-    value: true
+  value: true
 });
 
 var _Lesson = __webpack_require__(90);
@@ -10452,12 +10452,6 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var axios = __webpack_require__(83);
 
 var components = { Lesson: _Lesson2.default };
-
-axios.get('http:localhost:8080\lessons').then(function (response) {
-    console.log(response);
-}).catch(function (error) {
-    console.log(error);
-});
 
 exports.default = components;
 
@@ -10500,10 +10494,10 @@ var Lesson = function (_React$Component) {
   function Lesson(props) {
     _classCallCheck(this, Lesson);
 
-    var _this = _possibleConstructorReturn(this, (Lesson.__proto__ || Object.getPrototypeOf(Lesson)).call(this, props));
+    var _this = _possibleConstructorReturn(this, (Lesson.__proto__ || Object.getPrototypeOf(Lesson)).call(this));
 
     _this.state = {};
-    _axios2.default.get('http:localhost:8080/lessons').then(function (response) {
+    _axios2.default.get('/lessons').then(function (response) {
       console.log(response);
     }).catch(function (error) {
       console.log(error);
@@ -10522,8 +10516,7 @@ var Lesson = function (_React$Component) {
       return _react2.default.createElement(
         'div',
         null,
-        'Hello ',
-        this.props.name
+        'this.state.'
       );
     }
   }]);

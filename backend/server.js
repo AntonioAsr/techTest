@@ -10,6 +10,10 @@ var bodyParser = require('body-parser');
 var data       = require('../data');
 var path       = require('path');
 
+/*
+app.use('/bootstrap', express.static(__dirname + '/node_modules/bootstrap/'))
+app.use('/jquery', express.static(__dirname + '/node_modules/jquery/dist'))*/
+
 // configure app to use bodyParser()
 // this will let us get the data from a POST
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -34,6 +38,13 @@ app.use('/', router);
 // =============================================================================
 app.listen(port);
 console.log('Magic happens on port ' + port);
+
+// ROUTE MAIN
+// =============================================================================
+
+app.get('/', function(req,res) {
+  res.sendfile('dist/index.html');
+});
 
 
 // ROUTE LESSONS

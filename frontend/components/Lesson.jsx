@@ -5,9 +5,9 @@ import axios from 'axios';
 class Lesson extends React.Component {
 
   constructor(props) {
-    super(props);
+    super();
     this.state = {};
-    axios.get('http:localhost:8080/lessons')
+    axios.get('/lessons')
     .then(response => {
         console.log(response)
     })
@@ -21,7 +21,9 @@ class Lesson extends React.Component {
   }
 
   render() {
-    return <div>Hello {this.props.name}</div>;
+    return (
+    <div>this.state.</div>
+    );
   }
 
 }
