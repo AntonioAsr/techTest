@@ -1,4 +1,5 @@
 // CUSTOM ELEMENTS
+import App from './App';
 import Lesson from './Lesson';
 
 // REACT-BOOTSTRAP ELEMENTS
@@ -8,7 +9,8 @@ import NavBarHeader from './NavBarHeader';
 var axios = require ('axios');
 
 
-const components = { Lesson, NavBarHeader }
+
+const components = { App, Lesson, NavBarHeader }
 
 
 

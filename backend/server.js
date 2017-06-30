@@ -50,10 +50,14 @@ app.get('/', function(req,res) {
 // ROUTE LESSONS
 // =============================================================================
 
-let myObject = {}
+let myObject = []
 let classesNoRoutesResponse = [];
         for (var item in data) {
-            myObject =  data[item]['location'] + data[item][' startdate']+ data[item]['startDate']
+            myObject =  {
+                "location":data[item]['location'],
+                "status":data[item][' status'],
+                "startDate":data[item]['startDate']
+            }
             //console.log( myObject + "\n")
             classesNoRoutesResponse.push(myObject)
             //console.log(myObject + "\n")

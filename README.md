@@ -20,7 +20,5 @@ This repo contains the data and brief descriptions for completing a miDrive tech
 
 ## Instalation
 - $ CD tech-test and then run $ npm install
-- This app make requests to localhost. Chrome doesn't support it. This is nice Chrome plugin that add this nice Chrome extension:
-    https://chrome.google.com/webstore/detail/allow-control-allow-origi/nlfbmbojpeacfghkpbjhddihlkkiljbi
-- More information can be found here about this topic:
-    https://stackoverflow.com/questions/28547288/no-access-control-allow-origin-header-is-present-on-the-requested-resource-err
+- $ webpack
+- $ npm run serve
