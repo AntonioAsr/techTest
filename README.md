@@ -17,8 +17,13 @@ This repo contains the data and brief descriptions for completing a miDrive tech
 - [Full Stack](exercises/full-stack.md)
 - iOS (Coming Soon)
 - Android (Coming Soon)
+## Notes
+
+- This project (until now) has some features of the backend exercises and front end. I will keep working on it during the weekend, as I have enjoyed a lot developing this.
+If you wish to have a look after the weekend, feel free to drop me a line or request it on hackajob! =)
 
 ## Instalation
 - $ CD tech-test and then run $ npm install
 - $ webpack
 - $ npm run serve
+- Go to localhost:8080
