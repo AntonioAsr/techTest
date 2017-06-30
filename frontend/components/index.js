@@ -10,7 +10,7 @@ var axios = require ('axios');
 
 
 
-const components = { App, Lesson, NavBarHeader }
+const components = { App, NavBarHeader }
 
 
 

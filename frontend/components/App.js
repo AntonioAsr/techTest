@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import LessonList from './LessonList';
 import axios from 'axios';
-
+import { Table } from 'react-bootstrap';
 
 
 class App extends React.Component {
@@ -35,7 +35,7 @@ render() {
   if(!this.state.lessons || this.state.lessons.length === 0) return <p>Please wait while loading data ...</p>
   return (
             <div>
-                <h1>Contact List</h1>
+                <h1>Lesson List</h1>
                 <LessonList lessons={this.state.lessons} />
             </div>
   );

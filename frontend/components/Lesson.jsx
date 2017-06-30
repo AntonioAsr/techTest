@@ -10,8 +10,11 @@ class Lesson extends React.Component {
   render(){
     return(
     <li>
-        {this.props.lesson.location}{this.props.lesson.data}
-     </li>
+        {this.props.lesson.location}
+        {this.props.lesson.status}
+        {this.props.lesson.startDate}
+        {this.props.lesson.route}
+    </li>
     )
   }
 
@@ -20,3 +23,14 @@ class Lesson extends React.Component {
 export default Lesson;
 
 
+/**
+ *
+ *     <tr>
+        <td>{this.props.lesson.location}</td>
+        <td>{this.props.lesson.status}</td>
+        <td>{this.props.lesson.startDate}</td>
+    </tr>
+ *
+ *
+ *
+ */

@@ -55,8 +55,9 @@ let classesNoRoutesResponse = [];
         for (var item in data) {
             myObject =  {
                 "location":data[item]['location'],
-                "status":data[item][' status'],
-                "startDate":data[item]['startDate']
+                //"route":data[item]['route'], //remove this line to do not retrun routes -> ### `GET` /lessons Retrieve a list of all lessons with routes omitted
+                "startDate":data[item]['startDate'],
+                "status":data[item][' status']
             }
             //console.log( myObject + "\n")
             classesNoRoutesResponse.push(myObject)
