@@ -8,6 +8,8 @@ let lessons = '../../data.json';
 
 class LessonList extends React.Component {
 
+
+
   render(){
     return(
       <tbody>
@@ -16,6 +18,7 @@ class LessonList extends React.Component {
           })
         }
       </tbody>
+
     )
   }
 

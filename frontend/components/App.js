@@ -4,6 +4,7 @@ import LessonList from './LessonList';
 import axios from 'axios';
 import { Table, Col } from 'react-bootstrap';
 let lessons = require('../../data.json');
+import StatusList from './StatusList';
 
 
 
@@ -19,9 +20,11 @@ render() {
             <tr>
             <th>Location</th>
             <th>Start Date</th>
+            <th>Status</th>
             </tr>
             </thead>
             <LessonList lessons={this.props.lessons}/>
+
             </Table>
           </Col>
     </div>
