@@ -2,54 +2,33 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import LessonList from './LessonList';
 import axios from 'axios';
-import { Table } from 'react-bootstrap';
+import { Table, Col } from 'react-bootstrap';
+let lessons = require('../../data.json');
+
 
 
 class App extends React.Component {
 
- constructor(props) {
-    super(props);
-
-    this.state = {          //equivalent to set initial state
-      lessons: props.lessons
-    };
-  }
-
-  setLessons() {
-    axios.get('/lessons')
-      .then(response => {
-          this.setState({
-            lessons: response.data
-          })
-    })
-    .catch(error => {
-        console.log(error)
-    });
-  }
-
-componentDidMount(){
-    this.setLessons();
-}
-
 render() {
-  if(!this.state.lessons || this.state.lessons.length === 0) return <p>Please wait while loading data ...</p>
+//this.props.lessos is a reference to app element props
   return (
-            <div>
-                <h1>Lesson List</h1>
-                <LessonList lessons={this.state.lessons} />
-            </div>
+    <div >
+          <Col md={4} className="scrollTable">
+            <Table responsive striped bordered condensed hover >
+            <thead>
+            <tr>
+            <th>Location</th>
+            <th>Start Date</th>
+            </tr>
+            </thead>
+            <LessonList lessons={this.props.lessons}/>
+            </Table>
+          </Col>
+    </div>
   );
+  }
 }
-}
-
-
-App.defaultProps = {
-   lessons: null
-};
-
-
-
-ReactDOM.render(<App/>,document.getElementById('List'));
+ReactDOM.render(<App lessons={lessons}/>,document.getElementById('List'));
 
 export default App;
 

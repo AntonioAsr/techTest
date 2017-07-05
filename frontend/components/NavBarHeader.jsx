@@ -9,7 +9,7 @@ class NavBarHeader extends React.Component {
             <Navbar>
                 <Navbar.Header>
                 <Navbar.Brand>
-                    <a href="#"><img src="./app/images/miDrive.svg" alt="miDrive"/></a>
+                    <a href="#"><img className="logo" src="./app/images/miDrive.svg" alt="miDrive"/></a>
                 </Navbar.Brand>
                 </Navbar.Header>
                 <Nav>

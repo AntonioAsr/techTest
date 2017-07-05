@@ -9,12 +9,14 @@ class Lesson extends React.Component {
 
   render(){
     return(
-    <li>
-        {this.props.lesson.location}
-        {this.props.lesson.status}
-        {this.props.lesson.startDate}
-        {this.props.lesson.route}
-    </li>
+      <tr>
+      <td>
+          {this.props.lesson.location}
+      </td>
+      <td>
+          {this.props.lesson.startDate}
+      </td>
+      </tr>
     )
   }
 
@@ -25,6 +27,8 @@ export default Lesson;
 
 /**
  *
+        {this.props.lesson.route}
+        {this.props.lesson.status}
  *     <tr>
         <td>{this.props.lesson.location}</td>
         <td>{this.props.lesson.status}</td>

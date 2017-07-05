@@ -8,10 +8,6 @@ import NavBarHeader from './NavBarHeader';
 // Other
 var axios = require ('axios');
 
-
-
 const components = { App, NavBarHeader }
-
-
 
 export default components;

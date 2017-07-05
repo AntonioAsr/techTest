@@ -7,7 +7,7 @@
 var express    = require('express');        // call express
 var app        = express();                 // define our app using express
 var bodyParser = require('body-parser');
-var data       = require('../data');
+var data       = require('../../data');
 var path       = require('path');
 
 /*
@@ -27,7 +27,7 @@ var port = process.env.PORT || 8080;        // set our port
 var router = express.Router();              // get an instance of the express Router
 
 // send our public directory
-     app.use(express.static(path.join(__dirname, '../dist')));
+     app.use(express.static(path.join(__dirname, '../../dist')));
 
 
 // REGISTER OUR ROUTES -------------------------------
@@ -46,31 +46,6 @@ app.get('/', function(req,res) {
   res.sendfile('dist/index.html');
 });
 
-
-// ROUTE LESSONS
-// =============================================================================
-
-let myObject = []
-let classesNoRoutesResponse = [];
-        for (var item in data) {
-            myObject =  {
-                "location":data[item]['location'],
-                //"route":data[item]['route'], //remove this line to do not retrun routes -> ### `GET` /lessons Retrieve a list of all lessons with routes omitted
-                "startDate":data[item]['startDate'],
-                "status":data[item][' status']
-            }
-            //console.log( myObject + "\n")
-            classesNoRoutesResponse.push(myObject)
-            //console.log(myObject + "\n")
-        }
-            //console.log(classesNoRoutesResponse)
-
-    router.route('/lessons')
-    // get all the lessons (accessed at GET http://localhost:8080/lessons)
-
-    .get(function(req, res) {
-        return res.json(classesNoRoutesResponse);
-    });
 
 
 // REGISTER OUR ROUTES -------------------------------

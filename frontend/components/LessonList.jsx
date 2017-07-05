@@ -3,19 +3,19 @@ import ReactDOM from 'react-dom';
 import axios from 'axios';
 import PropTypes from 'prop-types';
 import Lesson from './Lesson';
+let lessons = '../../data.json';
+
 
 class LessonList extends React.Component {
 
-
-
   render(){
     return(
-      <ul>
+      <tbody>
         {this.props.lessons.map((lesson)=>{
           return <Lesson lesson={lesson} />
           })
         }
-      </ul>
+      </tbody>
     )
   }
 
@@ -23,7 +23,12 @@ class LessonList extends React.Component {
 
 export default LessonList;
 
-
+      // <ul>
+      //   {this.props.lessons.map((lesson)=>{
+      //     return <Lesson lesson={lesson} />
+      //     })
+      //   }
+      // </ul>
 
 
 
